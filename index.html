@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jabes Automotive LLC | Auto Repair &amp; Towing — Ronkonkoma, NY</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --black:#0a0a0c; --charcoal:#131316; --charcoal-2:#1b1b1f;
+    --red:#d61f2c; --red-dark:#8f1219; --blue:#1e4fb8; --blue-dark:#12315e;
+    --chrome-1:#eef0f3; --chrome-2:#9096a0; --white:#f5f5f7; --muted:#9a9aa2; --line:rgba(255,255,255,0.08);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{background:var(--black);color:var(--white);font-family:'Barlow',sans-serif;line-height:1.6;overflow-x:hidden;}
+  h1,h2,h3,.logo-word{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:0.03em;}
+  a{color:inherit;text-decoration:none;}
+  .placeholder-tag{display:inline-block;font-size:0.7rem;font-family:'Barlow',sans-serif;text-transform:uppercase;letter-spacing:0.08em;color:#ffcf5c;border:1px dashed rgba(255,207,92,0.5);background:rgba(255,207,92,0.06);padding:3px 8px;border-radius:4px;margin-left:8px;vertical-align:middle;}
+  .container{max-width:1180px;margin:0 auto;padding:0 28px;}
+  header{position:fixed;top:0;left:0;right:0;z-index:100;background:linear-gradient(180deg, rgba(10,10,12,0.92), rgba(10,10,12,0.75));backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
+  nav{display:flex;align-items:center;justify-content:space-between;padding:16px 28px;max-width:1180px;margin:0 auto;}
+  .brand{display:flex;align-items:center;gap:12px;}
+  .brand svg{width:42px;height:42px;flex-shrink:0;}
+  .logo-word{font-size:1.15rem;font-weight:600;letter-spacing:0.06em;line-height:1.1;}
+  .logo-word span{display:block;font-size:0.6rem;color:var(--muted);letter-spacing:0.25em;font-family:'Barlow',sans-serif;text-transform:uppercase;font-weight:500;}
+  .nav-links{display:flex;align-items:center;gap:30px;}
+  .nav-links a{font-size:0.85rem;text-transform:uppercase;letter-spacing:0.08em;font-weight:500;color:var(--muted);transition:color 0.2s;}
+  .nav-links a:hover{color:var(--white);}
+  .nav-cta{display:flex;align-items:center;gap:14px;}
+  .lang-pill{font-size:0.7rem;font-weight:600;letter-spacing:0.05em;border:1px solid var(--line);border-radius:20px;padding:5px 12px;color:var(--muted);}
+  .btn{display:inline-block;padding:11px 22px;border-radius:3px;font-family:'Oswald',sans-serif;font-size:0.85rem;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;transition:transform 0.2s, box-shadow 0.2s;}
+  .btn-red{background:linear-gradient(135deg,var(--red),var(--red-dark));color:#fff;box-shadow:0 4px 20px rgba(214,31,44,0.35);}
+  .btn-red:hover{transform:translateY(-2px);box-shadow:0 8px 26px rgba(214,31,44,0.5);}
+  .btn-outline{border:1px solid rgba(255,255,255,0.25);color:#fff;}
+  .btn-outline:hover{border-color:#fff;background:rgba(255,255,255,0.06);}
+  .menu-toggle{display:none;background:none;border:0;color:#fff;font-size:1.6rem;cursor:pointer;}
+  .hero{position:relative;height:100vh;min-height:640px;display:flex;align-items:center;background:radial-gradient(ellipse at 30% 20%, rgba(214,31,44,0.18), transparent 55%),radial-gradient(ellipse at 80% 80%, rgba(30,79,184,0.22), transparent 55%),linear-gradient(180deg, #0a0a0c, #131316 70%, #0a0a0c);}
+  .hero-video-slot{position:absolute;inset:0;overflow:hidden;border-bottom:1px solid var(--line);}
+  .hero-video-slot video{width:100%;height:100%;object-fit:cover;}
+  .hero-video-slot::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg, rgba(10,10,12,0.55) 0%, rgba(10,10,12,0.35) 40%, rgba(10,10,12,0.92) 100%);}
+  .hero-video-cue{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0.5;}
+  .play-ring{width:78px;height:78px;border-radius:50%;border:2px solid rgba(255,255,255,0.6);display:flex;align-items:center;justify-content:center;}
+  .play-ring div{width:0;height:0;border-top:12px solid transparent;border-bottom:12px solid transparent;border-left:20px solid #fff;margin-left:6px;}
+  .hero-content{position:relative;z-index:2;max-width:720px;}
+  .eyebrow{display:flex;align-items:center;gap:10px;margin-bottom:20px;font-size:0.8rem;letter-spacing:0.2em;text-transform:uppercase;color:#ff8a91;font-weight:600;}
+  .eyebrow::before{content:"";width:30px;height:2px;background:var(--red);}
+  .hero h1{font-size:clamp(2.6rem,6vw,4.6rem);line-height:1.02;margin-bottom:20px;}
+  .hero h1 em{font-style:normal;background:linear-gradient(120deg,var(--chrome-1),var(--chrome-2),var(--chrome-1));-webkit-background-clip:text;background-clip:text;color:transparent;}
+  .hero p{font-size:1.1rem;color:#cfcfd4;max-width:520px;margin-bottom:34px;}
+  .hero-actions{display:flex;gap:16px;flex-wrap:wrap;}
+  .hero-note{margin-top:28px;font-size:0.8rem;color:var(--muted);}
+  section{padding:100px 0;position:relative;}
+  .section-head{max-width:640px;margin-bottom:56px;}
+  .section-head .eyebrow::before{background:var(--blue);}
+  .section-head .eyebrow{color:#7fa4ff;}
+  .section-head h2{font-size:clamp(1.8rem,3.4vw,2.6rem);}
+  .section-head p{color:var(--muted);margin-top:14px;font-size:1.02rem;max-width:560px;}
+  .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+  .service-card{background:var(--charcoal);border:1px solid var(--line);border-radius:10px;padding:30px 26px;transition:transform 0.25s, border-color 0.25s;}
+  .service-card:hover{transform:translateY(-6px);border-color:rgba(214,31,44,0.4);}
+  .service-icon{width:46px;height:46px;border-radius:8px;margin-bottom:20px;background:linear-gradient(135deg,var(--red),var(--blue));display:flex;align-items:center;justify-content:center;}
+  .service-icon svg{width:24px;height:24px;stroke:#fff;fill:none;stroke-width:2;}
+  .service-card h3{font-size:1.05rem;margin-bottom:10px;letter-spacing:0.02em;}
+  .service-card p{color:var(--muted);font-size:0.92rem;}
+  .towing-band{background:linear-gradient(120deg, var(--red-dark), #4a0f14 60%, #14090a);padding:70px 0;border-top:1px solid rgba(255,255,255,0.08);border-bottom:1px solid rgba(255,255,255,0.08);}
+  .towing-inner{display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap;}
+  .towing-inner h2{font-size:clamp(1.6rem,3vw,2.2rem);max-width:520px;}
+  .towing-inner p.tag{color:#ffd3d6;font-size:0.85rem;letter-spacing:0.15em;text-transform:uppercase;margin-bottom:10px;font-weight:600;}
+  .towing-inner .desc{color:#f1c3c6;max-width:480px;margin-top:12px;font-size:0.98rem;}
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;}
+  .video-block{position:relative;aspect-ratio:16/10;border-radius:12px;overflow:hidden;background:linear-gradient(160deg,var(--charcoal-2),var(--black));border:1px solid var(--line);display:flex;align-items:center;justify-content:center;}
+  .video-block video{width:100%;height:100%;object-fit:cover;position:absolute;inset:0;}
+  .video-block .label{position:absolute;bottom:16px;left:16px;font-size:0.72rem;color:var(--muted);letter-spacing:0.08em;text-transform:uppercase;z-index:2;}
+  .about-text h2{font-size:clamp(1.7rem,3vw,2.3rem);margin-bottom:20px;}
+  .about-text p{color:#c7c7cc;margin-bottom:16px;}
+  .trust-list{list-style:none;margin-top:26px;display:grid;gap:14px;}
+  .trust-list li{display:flex;gap:12px;align-items:flex-start;color:#d8d8dc;font-size:0.95rem;}
+  .trust-list li svg{width:18px;height:18px;flex-shrink:0;margin-top:3px;stroke:var(--red);fill:none;stroke-width:2.4;}
+  .area-section{background:var(--charcoal);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .area-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:50px;align-items:center;}
+  .area-map{aspect-ratio:4/3;border-radius:12px;border:1px solid var(--line);background:radial-gradient(circle at 30% 40%, rgba(214,31,44,0.25), transparent 60%),radial-gradient(circle at 70% 65%, rgba(30,79,184,0.25), transparent 60%),var(--black);display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:0.85rem;letter-spacing:0.1em;text-transform:uppercase;}
+  .area-list{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px;}
+  .area-chip{border:1px solid var(--line);padding:7px 14px;border-radius:20px;font-size:0.82rem;color:var(--muted);}
+  .reviews-empty{border:1px dashed var(--line);border-radius:12px;padding:50px 40px;text-align:center;background:var(--charcoal);}
+  .reviews-empty h3{font-size:1.3rem;margin-bottom:12px;}
+  .reviews-empty p{color:var(--muted);max-width:460px;margin:0 auto 22px;}
+  .stars{display:flex;justify-content:center;gap:4px;margin-bottom:18px;opacity:0.35;}
+  .stars svg{width:20px;height:20px;fill:var(--chrome-1);}
+  .review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+  .review-card{background:var(--charcoal);border:1px solid var(--line);border-radius:10px;padding:26px;}
+  .review-card .stars{justify-content:flex-start;opacity:1;margin-bottom:14px;}
+  .review-card .stars svg{fill:#ffcf5c;width:16px;height:16px;}
+  .review-card p{color:#d8d8dc;font-size:0.94rem;margin-bottom:14px;}
+  .review-card .name{color:var(--muted);font-size:0.85rem;font-weight:600;}
+  footer{background:#000;padding:70px 0 30px;border-top:1px solid var(--line);}
+  .footer-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:40px;margin-bottom:50px;}
+  .footer-brand .logo-word{margin-bottom:14px;}
+  .footer-brand p{color:var(--muted);font-size:0.9rem;max-width:280px;}
+  .footer-col h4{font-size:0.82rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);margin-bottom:18px;}
+  .footer-col ul{list-style:none;display:grid;gap:10px;}
+  .footer-col a{color:#d8d8dc;font-size:0.92rem;}
+  .footer-col a:hover{color:var(--red);}
+  .footer-bottom{border-top:1px solid var(--line);padding-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;color:var(--muted);font-size:0.8rem;}
+  @media(max-width:860px){.services-grid{grid-template-columns:1fr 1fr;}.about-grid,.area-grid{grid-template-columns:1fr;}.footer-grid{grid-template-columns:1fr 1fr;}.review-grid{grid-template-columns:1fr;}}
+  @media(max-width:640px){.nav-links{position:fixed;top:73px;left:0;right:0;bottom:0;background:var(--black);flex-direction:column;justify-content:flex-start;padding:40px 28px;gap:26px;transform:translateX(100%);transition:transform 0.3s;}.nav-links.open{transform:translateX(0);}.menu-toggle{display:block;}.nav-cta .btn-outline{display:none;}.services-grid{grid-template-columns:1fr;}.footer-grid{grid-template-columns:1fr;}.towing-inner{flex-direction:column;align-items:flex-start;}}
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="brand">
+      <svg viewBox="0 0 100 100" fill="none">
+        <circle cx="50" cy="50" r="46" stroke="url(#chromeRing)" stroke-width="5"/>
+        <circle cx="50" cy="50" r="32" stroke="#d61f2c" stroke-width="3"/>
+        <circle cx="50" cy="50" r="8" fill="#1e4fb8"/>
+        <g stroke="#eef0f3" stroke-width="4" stroke-linecap="round">
+          <line x1="50" y1="10" x2="50" y2="22"/><line x1="50" y1="78" x2="50" y2="90"/>
+          <line x1="10" y1="50" x2="22" y2="50"/><line x1="78" y1="50" x2="90" y2="50"/>
+          <line x1="22" y1="22" x2="30" y2="30"/><line x1="70" y1="70" x2="78" y2="78"/>
+          <line x1="78" y1="22" x2="70" y2="30"/><line x1="30" y1="70" x2="22" y2="78"/>
+        </g>
+        <defs><linearGradient id="chromeRing" x1="0" y1="0" x2="100" y2="100"><stop offset="0" stop-color="#eef0f3"/><stop offset="1" stop-color="#6e727a"/></linearGradient></defs>
+      </svg>
+      <div class="logo-word" id="brandName">JABES AUTOMOTIVE<span id="brandTagline">Repair &middot; Diagnostics &middot; Towing</span></div>
+    </div>
+    <div class="nav-links" id="navLinks">
+      <a href="#services">Services</a><a href="#towing">Towing</a><a href="#about">About</a><a href="#area">Service Area</a><a href="#contact">Contact</a>
+    </div>
+    <div class="nav-cta">
+      <span class="lang-pill">EN&nbsp;/&nbsp;ES</span>
+      <a href="#" id="navPhoneLink" class="btn btn-outline">Call Now</a>
+      <button class="menu-toggle" id="menuToggle">&#9776;</button>
+    </div>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-video-slot" id="heroVideoSlot">
+    <div class="hero-video-cue"><div class="play-ring"><div></div></div></div>
+  </div>
+  <div class="container hero-content">
+    <div class="eyebrow">Ronkonkoma, NY &middot; Suffolk County</div>
+    <h1 id="heroHeadline">Honest Repairs.<br><em>Real</em> Towing, Anytime.</h1>
+    <p id="heroDescription"></p>
+    <div class="hero-actions">
+      <a href="#" id="heroPhoneLink" class="btn btn-red">Call the Shop</a>
+      <a href="#services" class="btn btn-outline">See Services</a>
+    </div>
+    <div class="hero-note" id="heroNote"></div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">What We Do</div>
+      <h2>Full-Service Repair, One Trusted Shop</h2>
+      <p>From routine maintenance to roadside emergencies — real diagnostics, real parts, real explanations before any work starts.</p>
+    </div>
+    <div class="services-grid" id="servicesGrid"></div>
+  </div>
+</section>
+
+<div class="towing-band" id="towing">
+  <div class="container towing-inner">
+    <div>
+      <p class="tag" id="towingTag"></p>
+      <h2 id="towingHeadline"></h2>
+      <p class="desc" id="towingDescription"></p>
+    </div>
+    <a href="#" id="towingPhoneLink" class="btn btn-red">Request a Tow</a>
+  </div>
+</div>
+
+<section id="about">
+  <div class="container about-grid">
+    <div class="video-block" id="aboutVideoBlock">
+      <div class="play-ring"><div></div></div>
+      <span class="label">Meet Kevin — founder story <span class="placeholder-tag" id="aboutVideoTag">video coming</span></span>
+    </div>
+    <div class="about-text">
+      <div class="eyebrow">Who We Are</div>
+      <h2>Built on Honest Work, Not Upsells</h2>
+      <p id="aboutP1"></p>
+      <p id="aboutP2"></p>
+      <ul class="trust-list" id="trustList"></ul>
+    </div>
+  </div>
+</section>
+
+<section class="area-section" id="area">
+  <div class="container area-grid">
+    <div>
+      <div class="eyebrow">Where We Work</div>
+      <h2>Serving Suffolk County — Ronkonkoma to the Hamptons</h2>
+      <p style="color:var(--muted);margin-top:14px;max-width:480px;" id="areaDescription"></p>
+      <div class="area-list" id="areaList"></div>
+    </div>
+    <div class="area-map">Service Area Map</div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Reputation</div>
+      <h2>What Customers Say</h2>
+    </div>
+    <div id="reviewsContainer"></div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo-word" id="footerBrandName">JABES AUTOMOTIVE</div>
+        <p id="footerTagline"></p>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li id="footerAddress"></li>
+          <li id="footerPhone"><span class="placeholder-tag">add phone</span></li>
+          <li id="footerHours"><span class="placeholder-tag">add hours</span></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul><li><a href="#services">Diagnostics</a></li><li><a href="#services">Brakes &amp; Tires</a></li><li><a href="#towing">Towing</a></li></ul>
+      </div>
+      <div class="footer-col">
+        <h4>Follow</h4>
+        <ul>
+          <li><a id="footerInstagram" href="#" target="_blank">Instagram</a></li>
+          <li><a href="#">Google Business Profile</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Jabes Automotive LLC. All rights reserved.</span>
+      <span id="footerCredit"></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('menuToggle').addEventListener('click', function(){
+  document.getElementById('navLinks').classList.toggle('open');
+});
+
+const checkIcon = '<svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>';
+const serviceIcons = [
+  '<path d="M9 12l2 2 4-4M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>',
+  '<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/>',
+  '<path d="M4 21V8l8-5 8 5v13M9 21v-6h6v6"/>',
+  '<circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="2.5"/><path d="M12 4v3M12 17v3M4 12h3M17 12h3"/>',
+  '<path d="M3 17h13v-5l-3-4H8L3 12v5zM16 12h5l-2-4h-3M6 20a2 2 0 100-4 2 2 0 000 4zM16 20a2 2 0 100-4 2 2 0 000 4z"/>',
+  '<path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>'
+];
+const starIcon = '<svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.6 6.2.6-4.6 4.2 1.3 6.1L10 14.9l-5.5 2.6 1.3-6.1L1.2 7.2l6.2-.6z"/></svg>';
+
+function setText(id, val){ const el = document.getElementById(id); if(el && val) el.textContent = val; }
+function setHref(id, val){ const el = document.getElementById(id); if(el && val) el.setAttribute('href', val); }
+
+fetch('/content/site.json?_=' + Date.now())
+  .then(r => r.json())
+  .then(data => {
+    // Brand
+    if(data.brand){
+      const nameEls = ['brandName','footerBrandName'];
+      nameEls.forEach(id => { const el = document.getElementById(id); if(el && data.brand.name){ el.childNodes[0].nodeValue = data.brand.name; } });
+      setText('brandTagline', data.brand.tagline);
+    }
+    // Contact
+    if(data.contact){
+      const telHref = data.contact.phone ? ('tel:' + data.contact.phone) : '#';
+      setHref('navPhoneLink', telHref);
+      setHref('heroPhoneLink', telHref);
+      setHref('towingPhoneLink', telHref);
+      if(data.contact.address){ document.getElementById('footerAddress').textContent = data.contact.address; }
+      if(data.contact.phoneDisplay){ document.getElementById('footerPhone').innerHTML = data.contact.phoneDisplay; }
+      if(data.contact.hours){ document.getElementById('footerHours').innerHTML = data.contact.hours; }
+      if(data.contact.instagram){ setHref('footerInstagram', data.contact.instagram); document.getElementById('footerInstagram').textContent = 'Instagram'; }
+    }
+    // Hero
+    if(data.hero){
+      if(data.hero.headlineLine1 || data.hero.headlineLine2){
+        document.getElementById('heroHeadline').innerHTML = (data.hero.headlineLine1||'') + '<br><em>' + (data.hero.headlineLine2||'').split(' ')[0] + '</em> ' + (data.hero.headlineLine2||'').split(' ').slice(1).join(' ');
+      }
+      setText('heroDescription', data.hero.description);
+      setText('heroNote', data.hero.note);
+      if(data.hero.videoUrl){
+        document.getElementById('heroVideoSlot').innerHTML = '<video autoplay muted loop playsinline src="' + data.hero.videoUrl + '"></video>';
+      }
+    }
+    // Services
+    if(data.services && data.services.length){
+      document.getElementById('servicesGrid').innerHTML = data.services.map((s,i) =>
+        '<div class="service-card"><div class="service-icon"><svg viewBox="0 0 24 24">' + (serviceIcons[i]||serviceIcons[0]) + '</svg></div><h3>' + s.title + '</h3><p>' + s.description + '</p></div>'
+      ).join('');
+    }
+    // Towing
+    if(data.towing){
+      setText('towingTag', data.towing.tag);
+      setText('towingHeadline', data.towing.headline);
+      setText('towingDescription', data.towing.description);
+    }
+    // About
+    if(data.about){
+      setText('aboutP1', data.about.paragraph1);
+      setText('aboutP2', data.about.paragraph2);
+      if(data.about.videoUrl){
+        document.getElementById('aboutVideoBlock').innerHTML = '<video autoplay muted loop playsinline src="' + data.about.videoUrl + '"></video><span class="label">Meet Kevin</span>';
+      }
+      if(data.about.trustPoints && data.about.trustPoints.length){
+        document.getElementById('trustList').innerHTML = data.about.trustPoints.map(p => '<li>' + checkIcon + ' ' + p + '</li>').join('');
+      }
+    }
+    // Service area
+    if(data.serviceArea){
+      setText('areaDescription', data.serviceArea.description);
+      if(data.serviceArea.areas && data.serviceArea.areas.length){
+        document.getElementById('areaList').innerHTML = data.serviceArea.areas.map(a => '<span class="area-chip">' + a + '</span>').join('');
+      }
+    }
+    // Reviews
+    if(data.reviews){
+      const container = document.getElementById('reviewsContainer');
+      if(data.reviews.mode === 'list' && data.reviews.items && data.reviews.items.length){
+        container.innerHTML = '<div class="review-grid">' + data.reviews.items.map(r =>
+          '<div class="review-card"><div class="stars">' + starIcon.repeat(r.rating||5) + '</div><p>"' + r.quote + '"</p><div class="name">' + r.name + '</div></div>'
+        ).join('') + '</div>';
+      } else {
+        container.innerHTML = '<div class="reviews-empty"><div class="stars">' + starIcon.repeat(5) + '</div><h3>Reviews Coming Soon</h3><p>We are just getting started on Google — real reviews from real customers will show up here as they come in.</p><a href="#" class="btn btn-outline">Leave a Review on Google</a></div>';
+      }
+    }
+    // Footer
+    if(data.footer){
+      setText('footerTagline', data.footer.tagline);
+      setText('footerCredit', data.footer.credit);
+    }
+  })
+  .catch(err => console.error('Could not load site content:', err));
+</script>
+
+</body>
+</html>

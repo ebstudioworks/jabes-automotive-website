@@ -1,0 +1,93 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "site"
+    label: "Site Content"
+    files:
+      - name: "main"
+        label: "Jabes Automotive — Site Content"
+        file: "content/site.json"
+        fields:
+          - label: "Brand"
+            name: "brand"
+            widget: "object"
+            fields:
+              - {label: "Business Name", name: "name", widget: "string"}
+              - {label: "Tagline (under logo)", name: "tagline", widget: "string"}
+              - {label: "Logo Image", name: "logoImage", widget: "image", required: false}
+          - label: "Contact"
+            name: "contact"
+            widget: "object"
+            fields:
+              - {label: "Phone (raw, e.g. 6315551234)", name: "phone", widget: "string", required: false}
+              - {label: "Phone (display, e.g. (631) 555-1234)", name: "phoneDisplay", widget: "string", required: false}
+              - {label: "Hours", name: "hours", widget: "text", required: false}
+              - {label: "Address", name: "address", widget: "string"}
+              - {label: "Instagram URL", name: "instagram", widget: "string", required: false}
+          - label: "Hero Section"
+            name: "hero"
+            widget: "object"
+            fields:
+              - {label: "Eyebrow text", name: "eyebrow", widget: "string"}
+              - {label: "Headline Line 1", name: "headlineLine1", widget: "string"}
+              - {label: "Headline Line 2 (chrome effect)", name: "headlineLine2", widget: "string"}
+              - {label: "Description", name: "description", widget: "text"}
+              - {label: "Note under buttons", name: "note", widget: "string"}
+              - {label: "Background Video", name: "videoUrl", widget: "file", required: false}
+          - label: "Services (6 cards)"
+            name: "services"
+            widget: "list"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Description", name: "description", widget: "text"}
+          - label: "Towing Band"
+            name: "towing"
+            widget: "object"
+            fields:
+              - {label: "Tag", name: "tag", widget: "string"}
+              - {label: "Headline", name: "headline", widget: "string"}
+              - {label: "Description", name: "description", widget: "text"}
+          - label: "About / Meet Kevin"
+            name: "about"
+            widget: "object"
+            fields:
+              - {label: "About Video", name: "videoUrl", widget: "file", required: false}
+              - {label: "Paragraph 1", name: "paragraph1", widget: "text"}
+              - {label: "Paragraph 2", name: "paragraph2", widget: "text"}
+              - label: "Trust Points"
+                name: "trustPoints"
+                widget: "list"
+                field: {label: "Point", name: "point", widget: "string"}
+          - label: "Service Area"
+            name: "serviceArea"
+            widget: "object"
+            fields:
+              - {label: "Description", name: "description", widget: "text"}
+              - label: "Area Chips"
+                name: "areas"
+                widget: "list"
+                field: {label: "Area", name: "area", widget: "string"}
+          - label: "Reviews"
+            name: "reviews"
+            widget: "object"
+            fields:
+              - {label: "Mode", name: "mode", widget: "select", options: ["comingSoon", "list"]}
+              - label: "Review Items"
+                name: "items"
+                widget: "list"
+                required: false
+                fields:
+                  - {label: "Customer Name", name: "name", widget: "string"}
+                  - {label: "Quote", name: "quote", widget: "text"}
+                  - {label: "Rating (1-5)", name: "rating", widget: "number", default: 5}
+          - label: "Footer"
+            name: "footer"
+            widget: "object"
+            fields:
+              - {label: "Tagline", name: "tagline", widget: "text"}
+              - {label: "Credit line", name: "credit", widget: "string"}
