@@ -1,13 +1,16 @@
 {
   "contact": {
-    "phone": "",
-    "phoneDisplay": "",
-    "hours": "",
-    "address": "45 Remington Blvd, Ronkonkoma, NY",
-    "instagram": ""
+    "phone": "+16315088846",
+    "phoneDisplay": "(631) 508-8846",
+    "hours": "Mon–Sat: 9:00 AM – 6:30 PM · Sun: Closed",
+    "hoursEs": "Lun–Sáb: 9:00 AM – 6:30 PM · Dom: Cerrado",
+    "address": "45 Remington Blvd, Ronkonkoma, NY 11779",
+    "instagram": "https://www.instagram.com/jabesautomotivellc",
+    "facebook": "https://www.facebook.com/profile.php?id=61590438118641",
+    "googleBusiness": "https://maps.google.com/?cid=11083460989965754521"
   },
   "serviceArea": {
-    "description": "Based at 45 Remington Blvd, Ronkonkoma — in-shop for repair and diagnostics, on the road for towing anywhere across Suffolk County.",
+    "description": "Based at 45 Remington Blvd, Ronkonkoma — in-shop for repair, transmission, and body work, on the road for towing anywhere across Suffolk County.",
     "areas": [
       "Ronkonkoma",
       "Lake Ronkonkoma",
@@ -25,31 +28,51 @@
   },
   "brand": {
     "name": "JABES AUTOMOTIVE LLC",
-    "tagline": "Repair · Diagnostics · Towing",
+    "tagline": "Transmission · Auto Body · Towing",
     "logoImage": "/images/uploads/jabes-logo-transparent.png"
   },
   "about": {
     "videoUrl": "",
-    "paragraph1": "Jabes Automotive is your trusted auto repair and towing partner on Long Island. We handle everything from scheduled maintenance to complex diagnostics and emergency roadside assistance — with fair pricing and no surprises.",
+    "paragraph1": "Jabes Automotive is Long Island's A-to-Z shop — from transmission rebuilds and auto body welding to diagnostics, scheduled maintenance, and emergency roadside assistance. Fair pricing, no surprises.",
     "paragraph2": "We've built our name the old-fashioned way: doing good work and treating people right. Word-of-mouth drives this shop, because we explain what we find, give honest estimates, and stand behind every repair.",
     "trustPoints": [
       "Honest, upfront pricing — every time",
-      "Trained, insured towing team",
+      "Transmission & auto body work done in-house",
       "Bilingual service — Se habla español",
-      "Local, Suffolk County-rooted"
+      "Cars, trucks, boats & motorcycles — A to Z"
     ]
   },
   "hero": {
     "eyebrow": "Ronkonkoma, NY · Suffolk County",
     "headlineLine1": "Honest Repairs.",
     "headlineLine2": "Real Towing, Anytime.",
-    "description": "Jabes Automotive is Long Island's trusted shop for diagnostics, brakes, tires, oil changes, general repair, and 24/7 towing — straight answers, fair pricing, no upsells.",
+    "description": "Transmissions, auto body & welding, diagnostics, brakes, and 24/7 towing — Ronkonkoma's A-to-Z shop for cars, trucks, boats, and motorcycles. Straight answers, fair pricing, no upsells.",
     "note": "Se habla español · Serving Ronkonkoma to the Hamptons",
     "videoUrl": ""
   },
   "reviews": {
-    "mode": "comingSoon",
-    "items": []
+    "mode": "list",
+    "googleUrl": "https://maps.google.com/?cid=11083460989965754521",
+    "items": [
+      {
+        "name": "Pastor Fernando Llodrat",
+        "rating": 5,
+        "quote": "I highly recommend them 100%! They do excellent work, provide great quality, and complete the job quickly.",
+        "quoteEs": "¡Los recomiendo 100%! Hacen un trabajo excelente, de gran calidad, y terminan el trabajo rápido."
+      },
+      {
+        "name": "Milena Cruz",
+        "rating": 5,
+        "quote": "Excellent service and the best attention — they were always in communication about everything my car needed and left it in excellent condition.",
+        "quoteEs": "Excelente servicio y la mejor atención, siempre estuvo en comunicación de todo lo que mi carro necesitaba y lo dejó excelente."
+      },
+      {
+        "name": "Manny Joe La Puerta",
+        "rating": 5,
+        "quote": "Great shop!! Eager to help with any issues you have or any unforeseen trouble your car may have to prevent a higher cost repair.",
+        "quoteEs": "¡Gran taller! Siempre dispuestos a ayudar con cualquier problema de tu carro — antes de que se vuelva una reparación más cara."
+      }
+    ]
   },
   "footer": {
     "tagline": "Honest auto repair and towing, built on trust — proudly serving Suffolk County from Ronkonkoma to the Hamptons.",
@@ -57,28 +80,93 @@
   },
   "services": [
     {
+      "title": "Transmission Repair",
+      "description": "Diagnosis, service, and full rebuilds — the deep drivetrain work most shops send out, done right here in-house."
+    },
+    {
+      "title": "Auto Body & Welding",
+      "description": "Collision repair, panel work, rust, and custom welding — we bring the body back, not just the mechanics."
+    },
+    {
       "title": "Diagnostics",
       "description": "Modern equipment to find the real issue fast — no guessing, no unnecessary parts."
     },
     {
-      "title": "Brake Service",
-      "description": "Pads, rotors, and full brake inspections — safety-first work, done right the first time."
-    },
-    {
-      "title": "Oil Changes",
-      "description": "Quick, scheduled maintenance to keep your engine running clean and reliable."
-    },
-    {
-      "title": "Tire Service",
-      "description": "Rotation, repair, and replacement — matched right for how and where you drive."
+      "title": "Brakes & Tires",
+      "description": "Pads, rotors, rotation, repair, and replacement — safety-first work, done right the first time."
     },
     {
       "title": "Towing & Roadside",
-      "description": "Breakdowns, accidents, lockouts — trained, insured towing when you need it most."
+      "description": "Breakdowns, accidents, lockouts — trained, insured towing when you need it most, 24/7."
     },
     {
       "title": "General Auto Repair",
-      "description": "Transmission, suspension, electrical — all makes and models, done with real care."
+      "description": "Suspension, electrical, and maintenance from A to Z — cars, trucks, boats, and motorcycles. If it runs, we work on it."
     }
-  ]
+  ],
+  "es": {
+    "hero": {
+      "eyebrow": "Ronkonkoma, NY · Condado de Suffolk",
+      "headlineLine1": "Reparaciones Honestas.",
+      "headlineLine2": "Grúa Real, a Toda Hora.",
+      "description": "Transmisiones, hojalatería y soldadura, diagnóstico, frenos y grúa 24/7 — el taller de la A a la Z en Ronkonkoma para carros, camiones, botes y motos. Respuestas claras, precios justos, sin ventas forzadas.",
+      "note": "English spoken · De Ronkonkoma a los Hamptons"
+    },
+    "services": [
+      {
+        "title": "Reparación de Transmisiones",
+        "description": "Diagnóstico, servicio y reconstrucciones completas — el trabajo de transmisión que otros talleres mandan afuera, aquí lo hacemos en casa."
+      },
+      {
+        "title": "Hojalatería y Soldadura",
+        "description": "Reparación de colisiones, paneles, óxido y soldadura a la medida — recuperamos la carrocería, no solo la mecánica."
+      },
+      {
+        "title": "Diagnóstico",
+        "description": "Equipos modernos para encontrar el problema real, rápido — sin adivinar y sin piezas innecesarias."
+      },
+      {
+        "title": "Frenos y Llantas",
+        "description": "Pastillas, rotores, rotación, reparación y reemplazo — trabajo seguro, bien hecho a la primera."
+      },
+      {
+        "title": "Grúa y Asistencia",
+        "description": "Averías, accidentes, llaves adentro — grúa entrenada y asegurada cuando más la necesitas, 24/7."
+      },
+      {
+        "title": "Reparación General",
+        "description": "Suspensión, sistema eléctrico y mantenimiento de la A a la Z — carros, camiones, botes y motos. Si corre, lo trabajamos."
+      }
+    ],
+    "towing": {
+      "tag": "Asistencia 24/7",
+      "headline": "Las Averías No Esperan. Nosotros Tampoco.",
+      "description": "Recuperación de accidentes, averías mecánicas, llaves adentro — un equipo de grúa entrenado que trata tu vehículo con cuidado, de día o de noche, en todo el Condado de Suffolk."
+    },
+    "about": {
+      "paragraph1": "Jabes Automotive es el taller de la A a la Z de Long Island — desde reconstrucción de transmisiones y hojalatería con soldadura hasta diagnóstico, mantenimiento programado y asistencia de emergencia. Precios justos, sin sorpresas.",
+      "paragraph2": "Nos hemos ganado el nombre a la antigua: haciendo buen trabajo y tratando bien a la gente. Este taller crece de boca en boca, porque explicamos lo que encontramos, damos presupuestos honestos y respaldamos cada reparación.",
+      "trustPoints": [
+        "Precios honestos y claros — siempre",
+        "Transmisiones y hojalatería en casa",
+        "Servicio bilingüe — English spoken",
+        "Carros, camiones, botes y motos — de la A a la Z"
+      ]
+    },
+    "serviceArea": {
+      "description": "Ubicados en 45 Remington Blvd, Ronkonkoma — en el taller para reparación, transmisiones y carrocería, y en la carretera con grúa por todo el Condado de Suffolk.",
+      "areas": [
+        "Ronkonkoma",
+        "Lake Ronkonkoma",
+        "Central Islip",
+        "Bohemia",
+        "Hauppauge",
+        "Los Hamptons",
+        "+ todo el Condado de Suffolk"
+      ]
+    },
+    "footer": {
+      "tagline": "Reparación automotriz y grúa honesta, construida sobre la confianza — sirviendo con orgullo al Condado de Suffolk, de Ronkonkoma a los Hamptons."
+    }
+  }
 }
