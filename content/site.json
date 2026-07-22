@@ -12,13 +12,7 @@
   "serviceArea": {
     "description": "Based at 45 Remington Blvd, Ronkonkoma — in-shop for repair, transmission, and body work, on the road for towing anywhere across Suffolk County.",
     "areas": [
-      "Ronkonkoma",
-      "Lake Ronkonkoma",
-      "Central Islip",
-      "Bohemia",
-      "Hauppauge",
-      "The Hamptons",
-      "+ all of Suffolk County"
+      
     ]
   },
   "towing": {
@@ -47,7 +41,7 @@
     "headlineLine1": "Honest Repairs.",
     "headlineLine2": "Real Towing, Anytime.",
     "description": "Transmissions, auto body & welding, diagnostics, brakes, and 24/7 towing — Ronkonkoma's A-to-Z shop for cars, trucks, boats, and motorcycles. Straight answers, fair pricing, no upsells.",
-    "note": "Se habla español · Serving Ronkonkoma to the Hamptons",
+    "note": "Se habla español · Serving All of Suffolk County",
     "videoUrl": ""
   },
   "reviews": {
@@ -75,7 +69,7 @@
     ]
   },
   "footer": {
-    "tagline": "Honest auto repair and towing, built on trust — proudly serving Suffolk County from Ronkonkoma to the Hamptons.",
+    "tagline": "Honest auto repair and towing, built on trust — proudly serving all of Suffolk County.",
     "credit": "Site by EB StudioWorks"
   },
   "services": [
@@ -110,7 +104,7 @@
       "headlineLine1": "Reparaciones Honestas.",
       "headlineLine2": "Grúa Real, a Toda Hora.",
       "description": "Transmisiones, hojalatería y soldadura, diagnóstico, frenos y grúa 24/7 — el taller de la A a la Z en Ronkonkoma para carros, camiones, botes y motos. Respuestas claras, precios justos, sin ventas forzadas.",
-      "note": "English spoken · De Ronkonkoma a los Hamptons"
+      "note": "English spoken · Sirviendo a todo el Condado de Suffolk"
     },
     "services": [
       {
@@ -156,17 +150,11 @@
     "serviceArea": {
       "description": "Ubicados en 45 Remington Blvd, Ronkonkoma — en el taller para reparación, transmisiones y carrocería, y en la carretera con grúa por todo el Condado de Suffolk.",
       "areas": [
-        "Ronkonkoma",
-        "Lake Ronkonkoma",
-        "Central Islip",
-        "Bohemia",
-        "Hauppauge",
-        "Los Hamptons",
-        "+ todo el Condado de Suffolk"
+        
       ]
     },
     "footer": {
-      "tagline": "Reparación automotriz y grúa honesta, construida sobre la confianza — sirviendo con orgullo al Condado de Suffolk, de Ronkonkoma a los Hamptons."
+      "tagline": "Reparación automotriz y grúa honesta, construida sobre la confianza — sirviendo con orgullo a todo el Condado de Suffolk."
     }
   }
 }
